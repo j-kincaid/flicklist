@@ -1,8 +1,6 @@
-
-
 var api = {
-	root: "https://api.themoviedb.org/3",
-	token: "" // TODO put your api key here
+    root: "https://api.themoviedb.org/3",
+    token: "6WqJOT4ORaSbgX4NQX7k7VwwmT0ub3LL" // TODO put your api key here
 }
 
 /**
@@ -10,16 +8,16 @@ var api = {
  * if successful, prints the results to the console
  */
 function testTheAPI() {
-	$.ajax({
-		url: api.root + "/discover/movie",
-		data: {
-			api_key: api.token,
-		},
-		success: function(response) {
-			console.log("We got a response from The Movie DB!");
-			console.log(response);
-		}
-	});
+    $.ajax({
+        url: api.root + "/discover/movie",
+        data: {
+            api_key: api.token,
+        },
+        success: function(response) {
+            console.log("We got a response from The Movie DB!");
+            console.log(response);
+        }
+    });
 }
 
 
