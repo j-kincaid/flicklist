@@ -90,10 +90,16 @@ function render() {
 
 
         // TODO 1
+
         // create a paragraph containing the movie object's .overview value
+        var overView = $("<p></p>")
+            .append(overView)
+
         // then, in the code block below,
         // append the paragraph in between the title and the button
-
+        .append(title)
+            .append($("<p></p>"))
+            .append(button);
 
         // append everything to itemView, along with an <hr/>
         var itemView = $("<li></li>")
