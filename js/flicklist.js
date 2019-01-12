@@ -1,6 +1,6 @@
 var api = {
     root: "https://api.themoviedb.org/3",
-    token: "6WqJOT4ORaSbgX4NQX7k7VwwmT0ub3LL" // TODO put your api key here
+    token: "927abdb76ea8191784995575141cbbcf" // TODO put your api key here
 }
 
 /**
@@ -15,10 +15,12 @@ function testTheAPI() {
         },
         success: function(response) {
             console.log("We got a response from The Movie DB!");
+            debugger;
             console.log(response);
         }
     });
 }
+
 
 
 console.log("The script loaded!");
