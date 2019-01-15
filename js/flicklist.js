@@ -48,14 +48,23 @@ function render() {
 
     // for each movie on the current browse list, 
     model.browseItems.forEach(function(movie) {
-        // TODO 3
-        // insert a list item into the <ul> in the browse section
+        let listItem = $(`<li></li>`).text(movie.title)
+
+        let button = $('input type="button" value="Add to watchlist" />')
+
+        // listItem.append('input type="button" value="Add to watchlist" />')
+
+        $('#section-browse ul').append(listItem)
+            // TODO 3
+            // insert a list item into the <ul> in the browse section
 
         // TODO 4
         // the list item should include a button that says "Add to Watchlist"
+        button.onCLick((event) => addToWatchList(movie))
 
         // TODO 5
         // when the button is clicked, this movie should be added to the model's watchlist and render() should be called again
+        $('#section-browse ul').append(listItem)
     });
 
 }
