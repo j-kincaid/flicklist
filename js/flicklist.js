@@ -79,12 +79,13 @@ function render() {
         var title = $("<h4></h4>").text(movie.original_title);
         var button = $("<button></button>")
             .text("Add to Watchlist")
+            .prop('disabled', model.watchlistItems.indexOf(movie) !== -1)
             .click(function() {
                 model.watchlistItems.push(movie);
                 render();
             });
 
-        console.log(model.watchlistItems.indexOf(movie));
+
         // TODO 2
         // the button should be disabled if this movie is already in
         // the user's watchlist
