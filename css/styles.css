@@ -13,6 +13,13 @@ give these elements a display property of inline-block
 and then style them as shown in the example (padding, margin, background, etc)
 */
 
+.item-watchlist {
+    display: inline-block;
+    padding: .5em;
+    margin: .5em;
+    background-color: orange;
+}
+
 
 /*
 TODO 5 
@@ -21,42 +28,50 @@ Hint: just apply the style using a parent selector, and then all
 descendent elements will automatically inherit the same styles
 */
 
+body {
+    color: gray;
+}
 
 #big-header {
-	background: gray;
-	color: white;
-	text-align: center;
+    background: gray;
+    color: white;
+    text-align: center;
 }
 
 #section-browse {
-	background: #eee;	
+    background: #eee;
 }
 
 #section-browse li {
-	margin-bottom: 40px;
-	list-style: none;
+    margin-bottom: 40px;
+    list-style: none;
 }
 
 section header {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-section, #big-header {
-	padding: 20px;
+section,
+#big-header {
+    padding: 20px;
 }
 
 ul {
-	padding-left: 0px;
+    padding-left: 0px;
 }
 
-button, input[type="submit"] {
-	border-width: 0px;
-	/*
+button,
+input[type="submit"] {
+    border-width: 0px;
+    background-color: orange;
+    color: #fff;
+    padding: .5em;
+    /*
 	TODO 7
 	give these buttons some padding, and color them orange with white text
 	*/
 }
 
 button:disabled {
-	opacity: 0.5;
+    opacity: 0.5;
 }

@@ -22,11 +22,12 @@ var api = {
  * if successful, updates the model.browseItems appropriately, and then invokes
  * the callback function that was passed in
  */
-function discoverMovies(callback) {
+function discoverMovies(query, callback) {
     $.ajax({
         url: api.root + "/discover/movie",
         data: {
-            api_key: api.token
+            api_key: api.token,
+            query
         },
         success: function(response) {
             model.browseItems = response.results;
@@ -67,6 +68,7 @@ function render() {
     model.watchlistItems.forEach(function(movie) {
         var title = $("<p></p>").text(movie.original_title);
         var itemView = $("<li></li>")
+            .attr('class')
             .append(title)
             // TODO 3
             // give itemView a class attribute of "item-watchlist"

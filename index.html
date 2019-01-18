@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8"/>
+    <meta charset="utf-8" />
 
-  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>  
-  <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <title>FlickList</title>
+    <title>FlickList</title>
 </head>
+
 <body>
 
-  <header id="big-header">
-    <h1>FlickList</h1>
-    <p>Keep a list of all the movies you've been meaning to watch.</p>
-  </header>
-
-  <section id="section-watchlist">
-    <header>
-      <h2>My Watchlist</h2>
-      <hr/>
+    <header id="big-header">
+        <h1>FlickList</h1>
+        <p>Keep a list of all the movies you've been meaning to watch.</p>
     </header>
 
-    <ul></ul>
-  </section>
+    <section id="section-watchlist">
+        <header>
+            <h2>My Watchlist</h2>
+            <hr/>
+        </header>
 
-  <section id="section-browse">
-    <header>
-      <h2>Browse Movies</h2>
-      <!-- 
+        <ul></ul>
+    </section>
+
+    <section id="section-browse">
+        <header>
+            <h2>Browse Movies</h2>
+            <!-- 
       TODO 6
       add a <form> here for users to search for movies by title 
-      -->
+     -->
+            <form id="form-search">
+                <input type="text">
+                <input type="submit" value="Search" />
+            </form>
+        </header>
 
-    </header>
+        <ul></ul>
+    </section>
 
-    <ul></ul>
-  </section>
+    <script src="js/flicklist.js"></script>
 
-  <script src="js/flicklist.js"></script>
+    <script>
+        // TODO 8
+        // fill in the missing pieces of the code below
 
-  <script>
-    // TODO 8
-    // fill in the missing pieces of the code below
+        $("form-search").submit(function(evt) {
 
-    $("TODO 8a").submit(function(evt) {
+            // first, we cancel the default action (which would leave the page)
+            evt.preventDefault();
 
-      // first, we cancel the default action (which would leave the page)
-      evt.preventDefault();
+            // figure out what the user typed
+            var searchTerm = $("#form-search input[type='text']").val();
 
-      // figure out what the user typed
-      var searchTerm = $("TODO 8b").val();
+            // TODO 8c invoke the searchMovies function,
+            // passing in the search term, and render as the callback
+            searchMovies(searchTerm, render)
+        });
+    </script>
 
-      // TODO 8c invoke the searchMovies function,
-      // passing in the search term, and render as the callback
+</body>
 
-    });
-  </script>
-
-</body> 
 </html>
