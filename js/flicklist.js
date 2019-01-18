@@ -83,6 +83,8 @@ function render() {
                 model.watchlistItems.push(movie);
                 render();
             });
+
+        console.log(model.watchlistItems.indexOf(movie));
         // TODO 2
         // the button should be disabled if this movie is already in
         // the user's watchlist
