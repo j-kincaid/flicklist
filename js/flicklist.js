@@ -26,7 +26,7 @@ function discoverMovies(callback) {
             console.log(response);
 
             // TODO 2
-            // update the model, setting its .browseItems property equal to the movies we recieved in the response
+            // update the model, setting its .browseItems property equal to the movies we received in the response
             model.browseItems = response.results;
             // invoke the callback function that was passed in. 
             callback();
@@ -58,13 +58,17 @@ function render() {
             // TODO 3
             // insert a list item into the <ul> in the browse section
 
+        let browseListItem = $("<li></li>").append("#section-browse");
+
         // TODO 4
+
+        var button = $("<button></button>").text("Add to watchlist");
         // the list item should include a button that says "Add to Watchlist"
-        button.onCLick((event) => addToWatchList(movie))
+        button.onCLick((event) => addToWatchList(movie));
 
         // TODO 5
         // when the button is clicked, this movie should be added to the model's watchlist and render() should be called again
-        $('#section-browse ul').append(listItem)
+        $('#section-browse ul').append(browseListItem);
     });
 
 }
