@@ -43,8 +43,12 @@ function render() {
     // TODO 7
     // clear everything from both lists
 
+    $("#section-watchlist").empty();
+    $("#section-browse").empty();
+
     // TODO 6
     // for each movie on the user's watchlist, insert a list item into the <ul> in the watchlist section
+
 
     // for each movie on the current browse list, 
     model.browseItems.forEach(function(movie) {
