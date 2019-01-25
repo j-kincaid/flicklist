@@ -1,10 +1,13 @@
-
-
 /*
 TODO 2c
 Customize the .jumbotron class to have centered text instead of left-aligned
 Also change its bottom margin to 1%
 */
+
+.jumbotron {
+    text-align: center;
+    margin-bottom: 1%;
+}
 
 
 /*
@@ -26,32 +29,35 @@ and should be 10px below the neighbor element above it
 /*
 TODO 3c
 Apply text-align: center; to the watchlist
+
 */
 
-
+ul {
+    text-align: center;
+}
 
 .main-content {
-	color: gray;
+    color: gray;
 }
 
 #section-browse {
-	background: black;	
+    background: black;
 }
 
 #section-browse form {
-	margin-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 hr {
-	border-color: rgba(128,128,128,0.2);
+    border-color: rgba(128, 128, 128, 0.2);
 }
 
 section header {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 section {
-	padding: 2%;
+    padding: 2%;
 }
 
 
@@ -62,21 +68,22 @@ The Bootstrap classes have made this stuff no longer relevant
 */
 
 ul {
-	padding-left: 0px;
+    padding-left: 0px;
 }
 
 button:disabled {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
-button, input[type="submit"] {
-	padding: 10px;
-	background: orange;
-	border-width: 0px;
-	color: white;
+button,
+input[type="submit"] {
+    padding: 10px;
+    background: orange;
+    border-width: 0px;
+    color: white;
 }
 
 #section-browse li {
-	margin-bottom: 40px;
-	list-style: none;
+    margin-bottom: 40px;
+    list-style: none;
 }
