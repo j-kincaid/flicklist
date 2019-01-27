@@ -227,7 +227,6 @@ function render() {
 }
 
 
-
 // When the HTML document is ready, we call the discoverMovies function,
 // and pass the render function as its callback
 $(document).ready(function() {
