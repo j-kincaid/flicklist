@@ -57,8 +57,6 @@ function discoverMovies(callback, keywords) {
  * the API's response.
  */
 function searchMovies(query, callback) {
-    // TODO 3
-    // change the url so that we search for keywords, not movies
     fetchKeywords(
         query,
         function(keywordsResponse) {
@@ -80,7 +78,24 @@ function searchMovies(query, callback) {
     );
 }
 
+// TODO 3
+// change the url so that we search for keywords, not movies
+function searchMovies(query, callback) {
+    $.ajax({
+        url: api.root + "/search/keyword",
+        data: {
+            api_key: api.token,
+            query: query
+        },
+        success: function(response) {
+            console.log(response);
 
+
+            var keywordIDs = response.results.map(getID);
+        }
+    })
+
+}
 
 
 
@@ -117,7 +132,7 @@ function searchMovies(query, callback) {
 
 
 $.ajax({
-    url: api.root + "/search/movie",
+    url: api.root + "/search/keyword",
     data: {
         api_key: api.token,
         query: query
@@ -135,7 +150,9 @@ $.ajax({
 });
 }
 
-function getID(banana)
+function getID(banana) {
+    return banana.id;
+}
 
 /**
  * re-renders the page with new content, based on the current state of the model
