@@ -150,6 +150,7 @@ $.ajax({
 });
 }
 
+
 function getID(banana) {
     return banana.id;
 }
@@ -224,6 +225,7 @@ function render() {
         $("#section-browse ul").append(itemView);
     });
 }
+
 
 
 // When the HTML document is ready, we call the discoverMovies function,
