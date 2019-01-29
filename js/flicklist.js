@@ -75,7 +75,7 @@ function searchMovies(query, callback) {
             };
             discoverMovies(data, callback);
         }
-    );
+    )
 }
 
 // TODO 3
@@ -141,7 +141,7 @@ $.ajax({
         console.log(response);
 
 
-        var keywordIDs = response.results.map(getID);
+        var keywordIDs = response.results.map(({ id }) => o.id);
         var keywordsString = keywordIDs.join("|");
         console.log(keywordsString);
 
