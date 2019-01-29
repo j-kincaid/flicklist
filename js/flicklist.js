@@ -39,7 +39,7 @@ function discoverMovies(callback, keywords) {
         url: api.root + "/discover/movie",
         data: {
             api_key: api.token,
-            add_keywords: keywords
+            with_keywords: keywords
         },
         success: function(response) {
             model.browseItems = response.results;
@@ -64,12 +64,12 @@ function searchMovies(query, callback) {
             var firstKeywordID = keywordsResponse.results[0].id
             var data = {
                 api_key: api.token,
-                add_keywords: firstKeywordID
+                with_keywords: firstKeywordID
             };
             discoverMovies(data, callback);
         },
         function() {
-            console.log("fetchkeywords failed")
+            console.log("fetchkeywords failed");
             var data = {
                 api_key: api.token
             };
@@ -196,7 +196,7 @@ function render() {
         // list item is a panel, contains the panel heading and body
         var itemView = $("<li></li>")
             .append([panelHeading, panelBody])
-            .attr("class", "panel panel-default");
+            .attr("class", "panel panel-default")
 
         $("#section-watchlist ul").append(itemView);
     });
